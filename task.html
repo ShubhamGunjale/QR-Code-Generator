@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    
+    .task {
+      width: calc(33.33% - 20px);
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .task h2 {
+      margin-top: 0;
+    }
+    
+    .task p {
+      margin-bottom: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .task {
+        width: calc(50% - 20px);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .task {
+        width: calc(100% - 20px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="task">
+    <h2>Task 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec nisi ac nulla consequat vehicula.</p>
+    <button onclick="completeTask(1)">Complete</button>
+  </div>
+  <div class="task">
+    <h2>Task 2</h2>
+    <p>Suspendisse potenti. Duis fermentum metus vitae neque tincidunt, vel convallis nunc ullamcorper.</p>
+    <button onclick="completeTask(2)">Complete</button>
+  </div>
+  <div class="task">
+    <h2>Task 3</h2>
+    <p>Quisque eget sapien faucibus, rutrum purus ac, vehicula justo.</p>
+    <button onclick="completeTask(3)">Complete</button>
+  </div>
+</div>
+
+<script>
+  function completeTask(taskNumber) {
+    alert("Task " + taskNumber + " completed!");
+    // You can add more functionality here, like removing the task from the dashboard
+  }
+</script>
+
+</body>
+</html>
